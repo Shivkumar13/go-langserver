@@ -12,6 +12,7 @@ RUN go mod download
 COPY . ./
 RUN go install .
 
+# Using alpine
 FROM alpine AS go-langserver
 
 RUN apk add --no-cache openssh git curl ca-certificates bind-tools tini
